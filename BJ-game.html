@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackJack-Game</title>
+
+    <link rel="stylesheet" href="BJ-game.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <header class="header">
+    <h1>BLACKJACK</h1>
+    <h3>InGame</h3>
+    <h2 id="timer">3</h2>
+    <div class="inGame-storage">
+        <span id="balance2" style="color: hsl(120, 100%, 30%);" 
+        >$</span>
+        <span id="balance">0</span>
+            <h4 id="wins">0</h4>
+            <span class="material-symbols-outlined">
+                trophy
+                </span>
+        </div>
+</header>
+
+    <div class="player-1">
+        <h1 id="customizationP-1">BOT</h1>
+        <h5 id="value-indicate1" >Card values:</h5>
+        <h5 id="total-value1">Total value:</h5>
+
+        <h4 id="BOTcardsDisplay"></h4>
+        <h id="numBOTtotal"></h4>
+
+    </div>
+    <h2 class="header" id="result">vs</h2>
+
+    <div class="player-2">
+        <h1 id="customizationP-2" >You</h1>
+        <h5 id="value-indicate2">card values:</h5>
+        <h5 id="total-value2">Total value:</h5>
+
+        <h4 id="PlayerCardsDisplay"></h4>
+        <h4 id="numPlayerTotal"></h4>
+    </div>
+    <div class="buttons-container">
+        <button id="hit">H i t</button>
+        <button id="stand">Stand</button><br><br>
+        <button id="rematch"> Do rematch</button>
+    </div>
+
+    <h5 class="hint">Tip: Stand button has limited uses sometimes</h5><br>
+    <h5 class="credits">Made by : GIGI-WebExplorer / Robert</h5>
+
+    <script src="BJ-script.js"></scripT>
+</body>
+</html>
