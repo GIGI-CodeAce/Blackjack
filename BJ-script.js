@@ -1,3 +1,4 @@
+// Made by : GIGI-CodeAce / Robert
 
 // BJ-MENU
 
@@ -211,7 +212,7 @@ if (startBTN){
 
     if (hitUI){
         hitUI.addEventListener("click", function() {
-            if (gameStarted === true){
+            if (gameStarted){
                     CardsPlayer.push(randomNum())
                     maxStands = 0
                     standUI.style.opacity = "100%" 
@@ -226,18 +227,17 @@ if (startBTN){
     
     if (standUI){
         standUI.addEventListener("click", function() {
-            if (gameStarted === true && maxStands < 2 && maxStandsSec < 3){
+            if (gameStarted && maxStands < 2 && maxStandsSec < 3){
                 CardsBOT.push(randomNum()) 
                 maxStands++
                 maxStandsSec++
                 renderGame()
 
-                if (maxStands === 2){
-                standUI.style.opacity = "60%" 
+                if (maxStands === 2 || maxStandsSec === 3 ){
+                    standUI.style.opacity = "60%" 
                 }
-                else if (maxStandsSec === 3){
-                standUI.style.opacity = "60%" 
-            }
+                
+            
             } 
         })
     }
@@ -281,3 +281,5 @@ if (startBTN){
 
         }
     }
+
+    // Made by : GIGI-CodeAce / Robert
