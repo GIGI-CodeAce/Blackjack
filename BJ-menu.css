@@ -5,122 +5,94 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 button{
-    cursor:pointer;
+    cursor: pointer;
 }
-.main{
-    margin-top: 50px;
+.header{
     text-align: center;
-    justify-content: center;
-    align-items: center;
-
 }
-.start-ui{
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(Media/background-BJ.jpg);
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    width: 50%;
-    height: 200px;
+.player-1, .player-2{
     border-radius: 10px;
-    border: 2px solid black;
-    border-top-color: hsl(140, 86%, 35%) ;
-    border-bottom-color: hsl(140, 86%, 35%) ;
+    padding-left: 20px ;
+    background-color: hsl(138, 30%, 10%);
+    border: 2px solid whitesmoke;
+    border-left-color: hsl(120, 100%, 30%);
+    margin-left: 30px;
+    margin-right: 30px;
+        height: 100px;
+            }
+#customizationP-1, #customizationP-2{
+    margin-top: 30px;
+    width: 100px;
+    color: hsl(120, 100%, 30%);
 }
-.start-ui:hover{
-
-    animation: grow 2s forwards;
-    animation-duration: 2s;
-
-    #start-btn{
-        position: absolute;
-        bottom: 8%;
-        left: 50%;
-    }
-    #price{
-        color: hsl(0, 0%, 90%);
-        text-shadow: 2px 2px 10px green;
-        text-shadow: 1px 1px 10px green;
-    }
+#customizationP-1:hover, #customizationP-2:hover{
+    color: hsl(120, 100%, 25%);
 }
-@keyframes grow{
-    100%{transform: scale(0.98, 1) }
+#value-indicate1, #total-value1, #value-indicate2, #total-value2{
+    position: absolute;
+    margin-left: 200px;
 }
-#title{
-
-    animation: rotate-title 0.4s forwards;
+#total-value1{
+    top: 210px;
 }
-@keyframes rotate-title{
-    0% {transform: rotate(-180deg);}
-    100% {transform: rotate(-360deg);
-    }
+#value-indicate1{
+    top: 170px;
+}
+#total-value2{
+    top: 380px;
+}
+#value-indicate2{
+    top: 340px;
+}
+.buttons-container {
+    margin-top: 25px;
+    text-align: center;
+}
+#hit,#stand, #rematch{
+    font-size: 15px;
+    padding: 3px 5px 3px 5px;
+    border-radius: 5px;
+    border: 1px solid hsl(0, 0%, 70%);
+    background-color: hsl(138, 30%, 10%);
+    color: hsl(120, 100%, 30%);
+}
+#hit:active,#stand:active, #rematch:active{
+    border-style:inset;
+}
+#hit:hover, #stand:hover, #rematch:hover{
+    text-shadow: 2px 2px 5px hsl(138, 30%, 50%) ;
+}
+#numPlayerTotal{
+    position: absolute;
+    top: 210px;
+    left: 145px;
+    margin-left: 200px;
+}
+#numBOTtotal{
+    position: absolute;
+    top: 401px;
+    left: 145px;
+    margin-left: 200px;
 }
 #balance{
     color: hsl(120, 100%, 30%);
+    left: 730px;
+    top: 50px;
 }
-#price{
-    text-align: center;
-    color:black;
-    text-shadow: 2px 2px 10px hsl(120, 100%, 30%);
-    text-shadow: 1px 1px 10px hsl(120, 100%, 30%);
+#dollar-sign{
+    color: hsl(120, 100%, 30%);
+    left: 1400px;
+    top: 50px;
 }
-
-#start-btn{
+#PlayerCardsDisplay{
     position: absolute;
-    bottom: 60%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 5px 10px 5px 10px ;
-    z-index: 1;
-    background-color: hsl(140, 86%, 25%);
-    color: whitesmoke;
-    border-style: groove;
-    border-radius: 5px;
-    border-color: hsl(0, 0%, 90%);
+    top: 342px;
+    left: 345px;
 }
-#start-btn:active{
-    border-style: outset;
-
-}
-#start-btn:hover{
-    text-shadow: 1px 1px 5px whitesmoke;
-}
-#BJ-img{
-    border: 3px solid black;
-    border-bottom-color: hsl(0, 0%, 70%) ;
-    border-top-color: hsl(0, 0%, 70%) ;
-    border-radius: 10px;
-}
-#add-bnlnc{
-    padding: 3px 7px 3px 7px;
-    background-color: green;
-    border-style: groove;
-    border-color:hsl(0, 0%, 11%);
-    border-radius: 10px;
-}
-#add-bnlnc:active{
-    border-style: inset;
-}
-#error{
-    color: hsl(0, 100%, 70%);
-}
-#winsDisplay{
+#BOTcardsDisplay{
     position: absolute;
-    color: yellow;
-    top: 190px ;
-    width: 22%;
-}
-#wins{
-    position: absolute;
-    color: yellow;
-    top: 210px ;
-    width: 22%;
-}
-.background{
-    background-color: black;
+    top: 172px;
+    left: 345px;
 }
 .credits {
     margin-bottom: 0px;
@@ -151,33 +123,44 @@ button{
     width: 100%;
     transform: translate(0, 1%);
 }
-#input-bet{
-    margin-bottom: 1px;
-    text-align: center;
-    border-radius: 0px 0px 5px 5px;
-    background-color: hsl(140, 86%, 30%);
-    opacity: 80%;
-    border: none;
-    width: 20%;
+#balance{
+    border: 1px solid hsl(120, 100%, 30%);
+    border-radius: 5px;
+    padding: 3px 5px 3px 20px;
+    position: absolute;
+    top: 35px;
+    left: 55px;
 }
-#betButton{
-    margin-bottom: 2px;
-    border: 1px solid hsl(140, 86%, 25%);
-    background-color: hsl(140, 86%, 30%);
-    padding: 0px 5px 0px 5px;
-    border-radius: 0px 0px 5px 5px;
-    opacity: 80%;
+#balance2{
+    position: absolute;
+    top: 39px;
+    left: 63px;
 }
-#betButton:active{
-    border-style: inset;
-    background-color: hsl(140, 86%, 32%);
+#winsDisplay{
+    position: absolute;
+    color: yellow;
+    top: 190px ;
+    width: 22%;
 }
-#betEx{
-    font-size: 14px;
-    color:hsl(0, 0%, 40%);
-    opacity: 75%;
+#wins{
+    margin-left: 1px;
+    border: 1px solid yellow;
+    border-radius: 5px;
+    padding: 3px 5px 3px 25px;
+    position: absolute;
+    color: yellow;
+    top: 14px ;
+    left: 120px;
 }
-::placeholder{
-    color: black;
-    opacity: 75%;
+
+.material-symbols-outlined {
+    position: absolute;
+    color: yellow;
+    top: 36px ;
+    left: 122px;
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 250,
+  'GRAD' 0,
+  'opsz' 1
 }
