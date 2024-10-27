@@ -106,23 +106,23 @@ function renderCards() {
     }
 }
 
-function countdownTimer(seconds) {
-    const timerElement = document.getElementById("timer");
-    if (!timerElement) return;
-    
-    let timeLeft = seconds;
-    const countdownInterval = setInterval(function() {
-        timerElement.textContent = timeLeft;
-        timeLeft--;
+const timerElement = document.getElementById("timer");
+let timeLeft = 3;
 
-        if (timeLeft < 0) {
-            clearInterval(countdownInterval);
-            timerElement.textContent = "Started";
-            gameStarted = true;
-            renderGame(); 
-        }
-    }, 1000);
-}
+timerElement.textContent = timeLeft;
+let timeoutID = setTimeout(function counter() {
+    timeLeft--;
+    timerElement.textContent = timeLeft;
+
+    if (timeLeft > 0) {
+        timeoutID = setTimeout(counter, 1000);
+    } else {
+        clearTimeout(timeoutID);
+        timerElement.textContent = "Started";
+        gameStarted = true;
+        renderGame();
+    }
+}, 1000);
 
 const PlayerCardsUI = document.getElementById("PlayerCardsDisplay");
 const numPlayerTotalUI = document.getElementById("numPlayerTotal");
@@ -168,7 +168,7 @@ if (standUI) {
 }
 if (rematchBtn){
     rematchBtn.addEventListener("click", ()=>{
-        window.location.href = './BG-menu'
+        window.location.href = './BJ-menu'
     })
 }
 
@@ -202,5 +202,3 @@ function renderGame() {
         delButtons();
     }
 }
-
-countdownTimer(3);
